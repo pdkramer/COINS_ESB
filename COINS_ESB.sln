@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "COINS_ESB", "COINS_ESB\COINS_ESB.csproj", "{8BEC046F-98F3-409B-981F-082679476651}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COINSInspector", "COINSInspector\COINSInspector.csproj", "{83E86935-8265-481C-A638-A02AC1F43E12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApexCOINESB", "ApexCOINESB\ApexCOINESB.csproj", "{305DDCBD-A29E-442E-8E4E-BB3597C84918}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COINSImport", "COINSImport\COINSImport.csproj", "{8906E881-6AA5-41FB-A35F-0D6A96486FB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1407A4C0-8CA0-40BF-A3E9-9B7DAB48F7A3}"
+	ProjectSection(SolutionItems) = preProject
+		ESB_Config.pdf = ESB_Config.pdf
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BEC046F-98F3-409B-981F-082679476651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BEC046F-98F3-409B-981F-082679476651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BEC046F-98F3-409B-981F-082679476651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BEC046F-98F3-409B-981F-082679476651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E86935-8265-481C-A638-A02AC1F43E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E86935-8265-481C-A638-A02AC1F43E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E86935-8265-481C-A638-A02AC1F43E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E86935-8265-481C-A638-A02AC1F43E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{305DDCBD-A29E-442E-8E4E-BB3597C84918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{305DDCBD-A29E-442E-8E4E-BB3597C84918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{305DDCBD-A29E-442E-8E4E-BB3597C84918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{305DDCBD-A29E-442E-8E4E-BB3597C84918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8906E881-6AA5-41FB-A35F-0D6A96486FB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8906E881-6AA5-41FB-A35F-0D6A96486FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8906E881-6AA5-41FB-A35F-0D6A96486FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8906E881-6AA5-41FB-A35F-0D6A96486FB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFB9DBE3-3882-42CA-A804-2A60DDFF985F}
+	EndGlobalSection
+EndGlobal

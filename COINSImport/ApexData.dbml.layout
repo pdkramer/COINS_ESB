@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 8.5" name="ApexData">
+  <DataContextMoniker Name="/ApexDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6540f574-f7aa-440d-a7c3-9d0054273228" absoluteBounds="1.125, 1, 2, 4.8477197265625">
+      <DataClassMoniker Name="/ApexDataDataContext/Vendor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b69e60e-4067-4448-9f78-9eb1ceea9ce6" absoluteBounds="1.1400000000000001, 1.46, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c1ea327e-a93a-4578-a89f-11a00783ce26" absoluteBounds="3.875, 1, 2, 5.2323225911458326">
+      <DataClassMoniker Name="/ApexDataDataContext/Job" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e31d2dcb-5004-46a5-97b9-1c6ef858d444" absoluteBounds="3.89, 1.46, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e752c9d-ac20-4a42-8c3f-eaa205bda79e" absoluteBounds="6.75, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ApexDataDataContext/JobPhase" />
+      <nestedChildShapes>
+        <elementListCompartment Id="656f2cfa-d1b7-44bb-b666-73ab0f09cbd4" absoluteBounds="6.765, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="45200c33-c4fe-4131-aa4c-095f8f3a6bf7" absoluteBounds="6.875, 2.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/ApexDataDataContext/JobPhCcd" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf44bc8f-6fbe-492c-8f37-cde52006b1d1" absoluteBounds="6.89, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5324f3ea-77ff-4410-8abd-53dfb108efca" absoluteBounds="6.875, 4.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/ApexDataDataContext/COINSESB_WB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="656fe989-207c-4c37-8681-1217f70b768b" absoluteBounds="6.89, 5.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2bb9ce8f-12da-4a06-9b03-154a1a309225" absoluteBounds="9.25, 1, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/ApexDataDataContext/WO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="526aec47-5b6c-4283-a54e-bde4a11eeaf3" absoluteBounds="9.265, 1.46, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

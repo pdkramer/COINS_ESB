@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema>
+      <xs:element name="COINSInterface">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Header">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="UserID" type="xs:string" />
+                  <xs:element minOccurs="0" name="From" type="xs:string" />
+                  <xs:element minOccurs="0" name="HostName" type="xs:string" />
+                  <xs:element minOccurs="0" name="Environment" type="xs:string" />
+                  <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+                  <xs:element minOccurs="0" name="Version" type="xs:string" />
+                  <xs:element minOccurs="0" name="Login">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" name="AuthToken" type="xs:string" />
+                        <xs:element minOccurs="0" name="User" type="xs:string" />
+                        <xs:element minOccurs="0" name="Password" type="xs:string" />
+                        <xs:element minOccurs="0" name="CID" type="xs:unsignedInt" />
+                        <xs:element minOccurs="0" name="Group" type="xs:string" />
+                        <xs:element minOccurs="0" name="extUser" type="xs:string" />
+                        <xs:element minOccurs="0" name="extAuth" type="xs:string" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+                <xs:attribute name="id" type="xs:string" use="optional" />
+                <xs:attribute name="confirm" use="optional">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:enumeration value="yes" />
+                      <xs:enumeration value="y" />
+                      <xs:enumeration value="true" />
+                      <xs:enumeration value="no" />
+                      <xs:enumeration value="n" />
+                      <xs:enumeration value="false" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="action" use="optional">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:enumeration value="CREATE" />
+                      <xs:enumeration value="DELETE" />
+                      <xs:enumeration value="UPDATE" />
+                      <xs:enumeration value="PUBLISH" />
+                      <xs:enumeration value="ACKNOWLEDGE" />
+                      <xs:enumeration value="EXCEPTION" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="entity" type="xs:string" use="optional" />
+                <xs:attribute name="arguments" type="xs:string" use="optional" />
+                <xs:attribute name="ackID" type="xs:string" use="optional" />
+                <xs:attribute name="testMsg" type="xs:boolean" use="optional" />
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Body">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="po_hdrRow">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" name="rsp_action" type="xs:string" />
+                        <xs:element name="commitOrder" type="xs:boolean" />
+                        <xs:element name="poh_ordno" type="xs:string" />
+                        <xs:element name="poh_votype" type="xs:string" />
+                        <xs:element name="poh_mpo" type="xs:string" />
+                        <xs:element name="pot_type" type="xs:string" />
+                        <xs:element name="poh_headoffice" type="xs:boolean" />
+                        <xs:element name="poh_confirm" type="xs:boolean" />
+                        <xs:element minOccurs="0" name="job_jobph" type="xs:string" />
+                        <xs:element minOccurs="0" name="pov_code" type="xs:string" />
+                        <xs:element minOccurs="0" name="faw_ref" type="xs:string" />
+                        <xs:element minOccurs="0" name="plt_num" type="xs:string" />
+                        <xs:element minOccurs="0" name="cim_intref" type="xs:int" />
+                        <xs:element minOccurs="0" name="cio_intref" type="xs:int" />
+                        <xs:element minOccurs="0" name="poh_accno" type="xs:string" />
+                        <xs:element minOccurs="0" name="poh_name" type="xs:string" />
+                        <xs:element minOccurs="0" name="poh_offname" type="xs:string" />
+                        <xs:element minOccurs="0" name="poh_attention" type="xs:string" />
+                        <xs:element name="poh_odate" type="xs:date" />
+                        <xs:element minOccurs="0" name="poh_ddate" type="xs:date" />
+                        <xs:element minOccurs="0" name="poh_dalf" type="xs:string" />
+                        <xs:element name="poh_desc" type="xs:string" />
+                        <xs:element name="pob_code" type="xs:string" />
+                        <xs:element minOccurs="0" name="poh_specins__1" type="xs:string" />
+                        <xs:element minOccurs="0" name="poh_specins__2" type="xs:string" />
+                        <xs:element minOccurs="0" name="poh_revrequired" type="xs:boolean" />
+                        <xs:element minOccurs="0" name="pvs_code" type="xs:string" />
+                        <xs:element minOccurs="0" name="poh_alwcode" type="xs:boolean" />
+                        <xs:element minOccurs="0" name="poh_reqdby" type="xs:string" />
+                        <xs:element minOccurs="0" name="poh_reqno" type="xs:string" />
+                        <xs:element minOccurs="0" name="pja_code" type="xs:string" />
+                        <xs:element minOccurs="0" name="vat_code" type="xs:string" />
+                        <xs:element minOccurs="0" name="poh_dMax" type="xs:decimal" />
+                        <xs:element minOccurs="0" name="poh_retval" type="xs:decimal" />
+                        <xs:element minOccurs="0" maxOccurs="unbounded" name="po_lineRow">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element minOccurs="0" name="rsp_action" type="xs:string" />
+                              <xs:element minOccurs="0" name="pol_seq" type="xs:int" />
+                              <xs:element name="pol_type" type="xs:string" />
+                              <xs:element minOccurs="0" name="pol_code" type="xs:string" />
+                              <xs:element name="pol_desc" type="xs:string" />
+                              <xs:element minOccurs="0" name="jwb_code" type="xs:string" />
+                              <xs:element minOccurs="0" name="pol_qty" type="xs:decimal" />
+                              <xs:element minOccurs="0" name="pol_uoq" type="xs:string" />
+                              <xs:element minOccurs="0" name="pol_price" type="xs:decimal" />
+                              <xs:element minOccurs="0" name="pol_per" type="xs:string" />
+                              <xs:element minOccurs="0" name="pol_disc" type="xs:decimal" />
+                              <xs:element minOccurs="0" name="pol_effdate" type="xs:date" />
+                              <xs:element minOccurs="0" name="pol_famount" type="xs:decimal" />
+                              <xs:element minOccurs="0" name="pol_ddate" type="xs:date" />
+                              <xs:element minOccurs="0" name="bqr_resource" type="xs:string" />
+                              <xs:element minOccurs="0" name="tcl_code" type="xs:string" />
+                              <xs:element minOccurs="0" name="vat_code" type="xs:string" />
+                              <xs:element minOccurs="0" name="pol_tax" type="xs:decimal" />
+                              <xs:element minOccurs="0" name="tpc_code" type="xs:string" />
+                              <xs:element minOccurs="0" name="pol_wbasis" type="xs:int" />
+                              <xs:element minOccurs="0" name="pol_chghol" type="xs:boolean" />
+                              <xs:element minOccurs="0" name="pol_minhire" type="xs:decimal" />
+                              <xs:element minOccurs="0" name="pol_offhire" type="xs:date" />
+                              <xs:element minOccurs="0" name="pol_CostHead" type="xs:string" />
+                              <xs:element minOccurs="0" name="pol_cat" type="xs:string" />
+                              <xs:element name="pol_npa_eligible" type="xs:boolean" />
+                              <xs:element minOccurs="0" name="pol_npa_cim_intref" type="xs:int" />
+                              <xs:element minOccurs="0" name="pol_barno" type="xs:string" />
+                              <xs:element minOccurs="0" name="pol_gross_length" type="xs:decimal" />
+                              <xs:element minOccurs="0" name="pol_gross_weight" type="xs:decimal" />
+                              <xs:element minOccurs="0" name="pol_net_length" type="xs:decimal" />
+                              <xs:element minOccurs="0" name="pol_net_weight" type="xs:decimal" />
+                            </xs:sequence>
+                            <xs:attribute name="id" type="xs:string" use="optional" />
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                      <xs:attribute name="id" type="xs:string" use="optional" />
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="COINSInterfaceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Header">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="UserID" type="xs:string" />
+                  <xs:element minOccurs="0" name="From" type="xs:string" />
+                  <xs:element minOccurs="0" name="HostName" type="xs:string" />
+                  <xs:element minOccurs="0" name="Environment" type="xs:string" />
+                  <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+                  <xs:element minOccurs="0" name="Version" type="xs:string" />
+                  <xs:element minOccurs="0" name="SchemaVersion" type="xs:string" />
+                  <xs:element minOccurs="0" name="Object" type="xs:string" />
+                </xs:sequence>
+                <xs:attribute name="id" type="xs:string" use="optional" />
+                <xs:attribute name="confirm" use="optional">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:enumeration value="yes" />
+                      <xs:enumeration value="y" />
+                      <xs:enumeration value="true" />
+                      <xs:enumeration value="no" />
+                      <xs:enumeration value="n" />
+                      <xs:enumeration value="false" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="action" use="optional">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:enumeration value="CREATE" />
+                      <xs:enumeration value="DELETE" />
+                      <xs:enumeration value="UPDATE" />
+                      <xs:enumeration value="PUBLISH" />
+                      <xs:enumeration value="ACKNOWLEDGE" />
+                      <xs:enumeration value="RESPONSE" />
+                      <xs:enumeration value="EXCEPTION" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="entity" type="xs:string" use="optional" />
+                <xs:attribute name="ackID" type="xs:string" use="optional" />
+                <xs:attribute name="initialise" type="xs:boolean" use="optional" />
+                <xs:attribute name="initCount" type="xs:int" use="optional" />
+                <xs:attribute name="sin_ref" type="xs:int" use="optional" />
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Body">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="Exception">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Exception" type="xs:string" />
+                        <xs:element name="ThrownAt" type="xs:string" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="po_hdrRow">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" maxOccurs="unbounded" name="po_lineRow">
+                          <xs:complexType>
+                            <xs:attribute name="pol_seq" type="xs:int" />
+                            <xs:attribute name="pol_type" type="xs:string" />
+                            <xs:attribute name="poi_item" type="xs:string" />
+                            <xs:attribute name="pol_code" type="xs:string" />
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                      <xs:attribute name="poh_ordno" type="xs:string" />
+                      <xs:attribute name="poh_chgno" type="xs:string" />
+                      <xs:attribute name="poh_appstat" type="xs:string" />
+                      <xs:attribute name="poh_committed" type="xs:string" />
+                      <xs:attribute name="id" type="xs:string" />
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="doAction">
+    <wsdl:part name="parameters" element="COINSInterface" />
+  </wsdl:message>
+  <wsdl:message name="doActionResponse">
+    <wsdl:part name="parameters" element="COINSInterfaceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="COINSInterfacePort">
+    <wsdl:operation name="doAction">
+      <wsdl:input message="doAction" />
+      <wsdl:output message="doActionResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="COINSInterfaceBinding" type="COINSInterfacePort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="doAction">
+      <soap:operation soapAction="https://valley.coinscloud.com/cgi-bin/learn.cgi/wouesb.p?service=POESB001&amp;namespace=false" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="COINSInterface" binding="COINSInterfaceBinding">
+      <soap:address location="https://valley.coinscloud.com/cgi-bin/learn.cgi/wouesb.p?service=POESB001&amp;namespace=false" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

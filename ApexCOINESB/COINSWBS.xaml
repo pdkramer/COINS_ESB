@@ -1,0 +1,37 @@
+﻿<Window
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ApexCOINESB"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" x:Class="ApexCOINESB.COINSWBS"
+        mc:Ignorable="d"
+        Closing="Window_Closing"
+        Title="COINS WBS" Height="450" Width="900">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="120" />
+        </Grid.ColumnDefinitions>
+
+        <dxg:GridControl x:Name="grdWBS" SelectionMode="Cell" >
+            <dxg:GridControl.View>
+                <dxg:TableView ShowSearchPanelMode="Always" ShowDataNavigator="True" EnableImmediatePosting="True" AllowGrouping="False" ShowGroupPanel="False"/>
+            </dxg:GridControl.View>
+            <dxg:GridColumn FieldName="Job" IsSmart="True"/>
+            <dxg:GridColumn FieldName="WB_Code" Header="WBS Code" IsSmart="True"/>
+            <dxg:GridColumn FieldName="WB_Desc" Header="Description" IsSmart="True"/>
+            <dxg:GridColumn FieldName="Activity" IsSmart="True"/>
+            <dxg:GridColumn FieldName="Section" IsSmart="True"/>
+            <dxg:GridColumn FieldName="UsesActivity" Header="Uses Activity" IsSmart="True"/>
+
+        </dxg:GridControl>
+
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+            <Button x:Name="btnDiscard" Margin="5" Content="Discard Changes" Click="btnDiscard_Click" />
+            <Button x:Name="btnClose" Grid.Row="1" Content="Close" Margin="5" Click="btnClose_Click" />
+        </StackPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="COINSInspector.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:COINSInspector"
+        mc:Ignorable="d"
+        Title="COINS XML Inspector" Height="750" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+            <Button x:Name="btnGetCOINSData" Margin="20" Click="BtnGetCOINSData_Click">
+                <TextBlock FontSize="16" Text="Get COINS Data" />
+            </Button>
+            <TextBlock Text="{Binding StatusText}" FontSize="14" HorizontalAlignment="Center" />
+        </StackPanel>
+        <ListBox x:Name="lbCOINSData" Grid.Column="0" Grid.Row="1"
+                 ItemsSource="{Binding COINSData}"
+                 ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Id}" FontSize="12" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBox Grid.Column="1" Grid.Row="1"
+                 Text="{Binding ElementName=lbCOINSData, Path=SelectedItem.RawXml}"
+                 TextWrapping="Wrap" FontSize="14" />
+    </Grid>
+</Window>
